@@ -277,7 +277,7 @@
 </div>
 </div>
 </footer>
- <!-- FIREBASE CORRETO (compat version) -->
+<!-- FIREBASE (CORRETO PARA SITE ESTÁTICO) -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
@@ -296,18 +296,36 @@ const db = firebase.firestore();
 
 let horaSelecionada = null;
 
-// selecionar hora
-document.querySelectorAll("button[type='button']").forEach(btn => {
+/* =========================
+   CAPTURAR BOTÕES DE HORA
+========================= */
+const botoesHora = document.querySelectorAll("button[type='button']");
+
+botoesHora.forEach(btn => {
   btn.addEventListener("click", () => {
     horaSelecionada = btn.innerText;
+
+    // reset visual
+    botoesHora.forEach(b => {
+      b.classList.remove("border-tertiary", "text-tertiary", "bg-tertiary/5");
+      b.classList.add("border-outline-variant/30");
+    });
+
+    // ativo
+    btn.classList.add("border-tertiary", "text-tertiary", "bg-tertiary/5");
+    btn.classList.remove("border-outline-variant/30");
   });
 });
 
-// SUBMIT FORM
-document.querySelector("form").addEventListener("submit", async (e) => {
+/* =========================
+   SUBMIT DO FORMULÁRIO
+========================= */
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const inputs = e.target.querySelectorAll("input");
+  const inputs = form.querySelectorAll("input");
 
   const nome = inputs[0].value;
   const telefone = inputs[1].value;
@@ -317,25 +335,31 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   const data = inputs[5].value;
 
   if (!horaSelecionada) {
-    alert("Escolhe uma hora!");
+    alert("⚠️ Escolhe uma hora antes de continuar!");
     return;
   }
 
-  await db.collection("reservas").add({
-    nome,
-    telefone,
-    email,
-    carro,
-    matricula,
-    data,
-    hora: horaSelecionada,
-    createdAt: new Date()
-  });
+  try {
+    await db.collection("reservas").add({
+      nome: nome,
+      telefone: telefone,
+      email: email,
+      carro: carro,
+      matricula: matricula,
+      data: data,
+      hora: horaSelecionada,
+      createdAt: new Date()
+    });
 
-  alert("Reserva enviada com sucesso!");
+    alert("✅ Reserva enviada com sucesso!");
 
-  e.target.reset();
-  horaSelecionada = null;
+    form.reset();
+    horaSelecionada = null;
+
+  } catch (error) {
+    console.error(error);
+    alert("❌ Erro ao enviar reserva. Vê consola (F12)");
+  }
 });
 </script>
 </body></html>
