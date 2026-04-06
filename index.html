@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#c5c6cc",
+                    "on-tertiary-fixed-variant": "#00504a",
+                    "on-primary": "#2e3035",
+                    "secondary-container": "#454747",
+                    "on-surface-variant": "#c6c6cb",
+                    "inverse-on-surface": "#2f3133",
+                    "tertiary-container": "#003733",
+                    "secondary": "#c6c6c6",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-tertiary-container": "#00aa9f",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "background": "#121416",
+                    "surface-container-lowest": "#0c0e10",
+                    "on-tertiary-fixed": "#00201d",
+                    "surface-dim": "#121416",
+                    "surface-container-highest": "#333537",
+                    "inverse-primary": "#5d5e64",
+                    "tertiary-fixed-dim": "#00ded0",
+                    "primary-fixed-dim": "#c5c6cc",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#282a2c",
+                    "surface-container": "#1e2022",
+                    "primary-container": "#2e3035",
+                    "outline": "#909095",
+                    "outline-variant": "#45474b",
+                    "error": "#ffb4ab",
+                    "on-tertiary": "#003733",
+                    "tertiary-fixed": "#00fded",
+                    "primary": "#c5c6cc",
+                    "inverse-surface": "#e2e2e5",
+                    "on-primary-fixed": "#191c20",
+                    "on-background": "#e2e2e5",
+                    "on-primary-fixed-variant": "#45474c",
+                    "tertiary": "#00ded0",
+                    "surface-bright": "#37393b",
+                    "surface-variant": "#333537",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "on-secondary-container": "#b5b5b5",
+                    "on-primary-container": "#96979e",
+                    "on-error": "#690005",
+                    "surface-container-low": "#1a1c1e",
+                    "primary-fixed": "#e2e2e8",
+                    "on-secondary-fixed-variant": "#454747",
+                    "on-secondary": "#2f3131",
+                    "surface": "#121416",
+                    "on-surface": "#e2e2e5",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Anton"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #121416;
+            color: #e2e2e5;
+            font-family: 'Manrope', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(18, 20, 22, 0.4) 0%, rgba(18, 20, 22, 1) 100%);
+        }
+        .glass-panel {
+            background: rgba(30, 32, 34, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #00ded0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#121416]/70 backdrop-blur-xl transition-all duration-300">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-container border border-outline-variant/15">
+<img alt="Dimotive Detail Brand Logo" class="w-full h-full object-cover" data-alt="Minimalist industrial logo for Dimotive Detail featuring geometric lines" src="https://lh3.googleusercontent.com/aida/ADBb0ugknoTAQDR9VZggfXDN1OqEB9r2SeL4iN2y6-wqMEwUVlJ-sx9PkU5J75FLPf700b-9N0DDgPzRO9jhiYFmc6mqFAHlCCC_nwSxfg5AZzFhrEGDxaFECXWFQVmAdZntMDZjkx1jLuHIpPVLOj_29sHvCsIqkCjyBW6VJj3PdA0X5iyJ8egOP9TBljkqKUQ4DsazMhWNCEl2rUpWz5oIWbeTXQSYSidWFc96uXaGKtkN5J4m1LlIQX3TKTLyYkweJYbxYzSsw-wPXL8" style=""/>
+</div>
+<span class="text-2xl font-['Anton'] uppercase text-[#d9d9d9] tracking-tight" style="">Dimotive Detail</span>
+</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-gray-400 font-medium font-['Manrope'] tracking-[0.05em] uppercase hover:text-[#00ded0] transition-colors duration-300" href="#inicio" style="">Início</a>
+<a class="text-[#00ded0] border-b-2 border-[#00ded0] pb-1 font-['Manrope'] tracking-[0.05em] uppercase transition-colors duration-300" href="#agendamento" style="">Agendamento</a>
+<a class="text-gray-400 font-medium font-['Manrope'] tracking-[0.05em] uppercase hover:text-[#00ded0] transition-colors duration-300" href="#contactos" style="">Contactos</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-[#d9d9d9]" onclick="location.href='tel:+351918873409'" style="">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[819px] flex items-center justify-center overflow-hidden" id="inicio">
+<div class="absolute inset-0 z-0">
+<img alt="High-end car detailing workshop background" class="w-full h-full object-cover" data-alt="Moody cinematic shot of a professional car detailing bay with dramatic lighting hitting a polished vehicle at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYO2zL_8p2FxsJ2UW6hAiwENxoOnykwlVBUOf4azIiPJgGmzqMx8ZaIiqJ_TUt5UeG0jNI66UjEMTLJkx-i8OLC3bZa-_gLSuIzetHLhQcWpAc33na3gO-_shKhnUUCkD-aEWfwiTZB27TPcMMwZ9UYqBhActj9RZtUn9VXURUszfa7hS1IGTfa26tnj0knZ2nyq9PXe10HN4rM5Eks2E6Uu-mtWuPzILtAWIwvjJKJ9-Taz8VZM-2msFZwr0z9DOL2Wc7WVQXfrlZ" style=""/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<div class="inline-block mb-6">
+<img alt="Dimotive Detail Logo" class="w-32 h-32 mx-auto rounded-full border-2 border-tertiary/20 shadow-2xl" data-alt="Minimalist industrial logo for Dimotive Detail featuring geometric lines and text" src="https://lh3.googleusercontent.com/aida/ADBb0ugknoTAQDR9VZggfXDN1OqEB9r2SeL4iN2y6-wqMEwUVlJ-sx9PkU5J75FLPf700b-9N0DDgPzRO9jhiYFmc6mqFAHlCCC_nwSxfg5AZzFhrEGDxaFECXWFQVmAdZntMDZjkx1jLuHIpPVLOj_29sHvCsIqkCjyBW6VJj3PdA0X5iyJ8egOP9TBljkqKUQ4DsazMhWNCEl2rUpWz5oIWbeTXQSYSidWFc96uXaGKtkN5J4m1LlIQX3TKTLyYkweJYbxYzSsw-wPXL8" style=""/>
+</div>
+<h1 class="font-['Anton'] text-6xl md:text-8xl uppercase tracking-tighter text-[#d9d9d9] mb-4" style="">Agendamento de <span class="text-tertiary" style="">Precisão</span></h1>
+<p class="font-['Manrope'] text-lg md:text-xl text-secondary max-w-2xl mx-auto font-light tracking-wide uppercase" style="">Atenção aos detalhes e o cuidado automóvel que o seu veículo merece.</p>
+</div>
+</section>
+<!-- Main Content: Scheduling & Bento Info -->
+<main class="max-w-7xl mx-auto px-8 -mt-24 relative z-20 pb-24" id="agendamento">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Scheduling Form Container -->
+<div class="lg:col-span-8">
+<div class="surface-container-low p-8 md:p-12 rounded-lg border border-outline-variant/10 shadow-2xl">
+<div class="mb-10">
+<h2 class="font-['Anton'] text-4xl uppercase text-[#d9d9d9] mb-2 tracking-tight" style="">Reserve </h2>
+<div class="w-12 h-1 bg-tertiary"></div>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-secondary" style="">Nome do Cliente</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant/30 border-x-0 border-t-0 focus:ring-0 focus:border-tertiary text-[#d9d9d9] transition-all py-3 px-4" placeholder="Nome completo" required="true" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-secondary" style="">Telemóvel</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant/30 border-x-0 border-t-0 focus:ring-0 focus:border-tertiary text-[#d9d9d9] transition-all py-3 px-4" placeholder="+351 --- --- ---" required="true" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-secondary" style="">Endereço de E-mail</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant/30 border-x-0 border-t-0 focus:ring-0 focus:border-tertiary text-[#d9d9d9] transition-all py-3 px-4" placeholder="email@example.com" required="true" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-secondary" style="">Modelo do Carro</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant/30 border-x-0 border-t-0 focus:ring-0 focus:border-tertiary text-[#d9d9d9] transition-all py-3 px-4" placeholder="ex. Porsche 911 GT3" required="true" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-secondary" style="">Matrícula</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant/30 border-x-0 border-t-0 focus:ring-0 focus:border-tertiary text-[#d9d9d9] transition-all py-3 px-4" placeholder="00-XX-00" required="true" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+<div class="space-y-4">
+<label class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-secondary" style="">Data pretendida</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant/30 border-x-0 border-t-0 focus:ring-0 focus:border-tertiary text-[#d9d9d9] transition-all py-3 px-4" required="true" type="date"/>
+</div>
+<div class="space-y-4">
+<label class="font-['Manrope'] text-xs uppercase tracking-[0.1em] text-secondary" style="">Horário</label>
+<div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">10:00</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">10:30</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">11:00</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">11:30</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">12:00</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">12:30</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-tertiary text-tertiary bg-tertiary/5" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">13:00</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">13:30</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">14:00</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">14:30</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">15:00</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">15:30</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">16:00</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">16:30</button>
+<button class="py-3 px-2 text-center text-xs font-semibold border border-outline-variant/30 hover:border-tertiary hover:text-tertiary transition-all" onclick="this.parentElement.querySelectorAll('button').forEach(b =&gt; { b.classList.remove('border-tertiary', 'text-tertiary', 'bg-tertiary/5'); b.classList.add('border-outline-variant/30'); }); this.classList.remove('border-outline-variant/30'); this.classList.add('border-tertiary', 'text-tertiary', 'bg-tertiary/5');" type="button">17:00</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/10">
+<button class="w-full py-5 bg-tertiary text-on-tertiary font-['Anton'] uppercase tracking-widest text-xl hover:brightness-110 transition-all duration-300" onclick="event.preventDefault(); if(this.form.checkValidity()){ alert('Pedido de agendamento enviado com sucesso! Receberá um e-mail de confirmação em breve.'); this.form.reset(); } else { this.form.reportValidity(); }" style="">Confirmar Agendamento</button>
+<p class="text-center text-xs text-secondary mt-4 font-['Manrope'] tracking-wide" style=""><span class="material-symbols-outlined text-xs align-middle mr-1" style="">info</span> Receberá um e-mail de confirmação após o agendamento. Lembrete 24h antes do serviço.</p>
+</div>
+</form>
+</div>
+</div>
+<!-- Side Bento Info -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Pricing Card -->
+<div class="surface-container-high p-8 rounded-lg border-l-4 border-tertiary flex flex-col justify-between h-48">
+<span class="text-xs font-['Manrope'] uppercase tracking-widest text-tertiary" style="">Tarifa</span>
+<div class="space-y-1">
+<h3 class="text-4xl font-['Anton'] text-[#d9d9d9]" style="">20€/h + IVA</h3>
+<p class="text-sm text-secondary" style="">Pagamento apenas após o serviço.</p>
+</div>
+</div>
+<!-- Philosophy Card -->
+<div class="surface-container p-8 rounded-lg border border-outline-variant/10">
+<h4 class="font-['Anton'] text-xl uppercase text-[#d9d9d9] mb-4" style="">A nossa Filosofia</h4>
+<p class="text-secondary text-sm leading-relaxed mb-6" style="">Não oferecemos pacotes de serviço – acreditamos que as tarifas horárias são as mais justas. Cada veículo tem um historial e necessidades únicas.</p>
+<div class="flex items-center gap-3 p-4 bg-surface-container-lowest rounded">
+<span class="material-symbols-outlined text-tertiary" style="">timer</span>
+<p class="text-xs font-bold text-[#d9d9d9] uppercase tracking-tighter" style="">Duração média: 3 horas para resultados premium.</p>
+</div>
+</div>
+<!-- Progress/Status Visual -->
+<div class="surface-container-low p-8 rounded-lg border border-outline-variant/10 overflow-hidden relative group">
+<h4 class="font-['Anton'] text-xl uppercase text-[#d9d9d9] mb-6" style="">Localização</h4>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1" style="">location_on</span>
+<div>
+<p class="text-sm font-bold text-[#d9d9d9]" style="">Cascais</p>
+<p class="text-xs text-secondary" style="">Rua do Flamingo 280<br/>2750-690 Cascais</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary mt-1" style="">call</span>
+<div>
+<p class="text-sm font-bold text-[#d9d9d9] cursor-pointer hover:text-tertiary transition-colors" onclick="location.href='tel:+351918873409'" style="">+351 918 873 409</p>
+<p class="text-xs text-secondary" style="">Seg - Sáb | 10:00 - 17:00</p>
+</div>
+</div>
+</div>
+<div class="mt-8 h-32 bg-surface-container-highest rounded-lg overflow-hidden grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+<img alt="Map of Cascais" class="w-full h-full object-cover" data-location="Cascais, Portugal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGofdZhfG1-TbiHKjei-hY4U_bMxFCiDC_6ylJFfGdEfbJIxCpQpbkolK99CKGEAfRhYagbQQlf4WF72yMtvuSRdWHlaXNRegraLdJ1fsc7SLUYVQWe1pDSwW_3pq7GzGj_Q8wn9Cdzxs-LX65SLVyLXoOA80_jgaF0oDuCCd8AHsMsOHpjI5hN6xn-QypCNBkSZDD5NHBus9Ozap8WGjX13YzPv2_NRp1MmPBGVnoGiqcZ1hZ5D8jAU6xxV-C1-tY9nfexZpUehtz" style=""/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1a1c1e] w-full py-12" id="contactos">
+<div class="flex flex-col md:flex-row justify-between items-start max-w-7xl mx-auto px-8 gap-8">
+<div class="space-y-4">
+<span class="text-xl font-['Anton'] text-[#d9d9d9] tracking-widest uppercase" style="">Dimotive Detail</span>
+<p class="font-['Manrope'] text-sm tracking-[0.05em] uppercase text-gray-400" style="">LAVAGEM Automóvel de Precisão</p>
+<p class="font-['Manrope'] text-xs tracking-[0.05em] uppercase text-gray-500 mt-4" style="">© 2024 Dimotive Detail. Todos os direitos reservados.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h5 class="text-[#00ded0] font-['Anton'] uppercase text-sm tracking-widest" style="">Contacto</h5>
+<ul class="space-y-2">
+<li class="" style=""><a class="font-['Manrope'] text-sm tracking-[0.05em] uppercase text-gray-400 hover:text-white transition-all opacity-80 hover:opacity-100" href="tel:+351918873409" style="">+351 918 873 409</a></li>
+<li class="" style=""><a class="font-['Manrope'] text-sm tracking-[0.05em] uppercase text-gray-400 hover:text-white transition-all opacity-80 hover:opacity-100" href="mailto:dimotive.detail@gmail.com" style="">dimotive.detail@gmail.com</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="text-[#00ded0] font-['Anton'] uppercase text-sm tracking-widest" style="">LOCALIZAÇÃO</h5>
+<p class="font-['Manrope'] text-sm tracking-[0.05em] uppercase text-gray-400 leading-relaxed" style="">
+                        Rua do Flamingo 280,<br/>2750-690 Cascais
+                    </p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
