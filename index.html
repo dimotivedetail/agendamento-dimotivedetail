@@ -277,22 +277,65 @@
 </div>
 </div>
 </footer>
-     
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+ <!-- FIREBASE CORRETO (compat version) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
-// Your web app's Firebase configuration
+<script>
 const firebaseConfig = {
   apiKey: "AIzaSyD7aGP0iuBSbVE84qPVnf97uJYcyzqVyME",
   authDomain: "reservas-d14f6.firebaseapp.com",
   projectId: "reservas-d14f6",
-  storageBucket: "reservas-d14f6.firebasestorage.app",
+  storageBucket: "reservas-d14f6.appspot.com",
   messagingSenderId: "366365355563",
   appId: "1:366365355563:web:bdfa9a0369fb8a89c8c46e"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+let horaSelecionada = null;
+
+// selecionar hora
+document.querySelectorAll("button[type='button']").forEach(btn => {
+  btn.addEventListener("click", () => {
+    horaSelecionada = btn.innerText;
+  });
+});
+
+// SUBMIT FORM
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const inputs = e.target.querySelectorAll("input");
+
+  const nome = inputs[0].value;
+  const telefone = inputs[1].value;
+  const email = inputs[2].value;
+  const carro = inputs[3].value;
+  const matricula = inputs[4].value;
+  const data = inputs[5].value;
+
+  if (!horaSelecionada) {
+    alert("Escolhe uma hora!");
+    return;
+  }
+
+  await db.collection("reservas").add({
+    nome,
+    telefone,
+    email,
+    carro,
+    matricula,
+    data,
+    hora: horaSelecionada,
+    createdAt: new Date()
+  });
+
+  alert("Reserva enviada com sucesso!");
+
+  e.target.reset();
+  horaSelecionada = null;
+});
+</script>
 </body></html>
